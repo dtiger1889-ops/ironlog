@@ -1,0 +1,22 @@
+{
+  "_note": "Weekly volume landmarks (sets/muscle/week). PRACTITIONER MODEL (Israetel / Renaissance Periodization) -- NOT peer-reviewed and NOT derived from logged history. Hand-editable. The cited peer-reviewed line is the >=10 sets/muscle/wk floor (Schoenfeld 2017); these MEV/MAV/MRV/MV bands are the practitioner overlay. Muscle keys match free-exercise-db tokens.",
+  "landmarks": [
+    { "muscle": "chest",        "mv": 8,  "mev": 10, "mav": 18, "mrv": 22 },
+    { "muscle": "lats",         "mv": 8,  "mev": 10, "mav": 18, "mrv": 25 },
+    { "muscle": "middle back",  "mv": 8,  "mev": 10, "mav": 18, "mrv": 25 },
+    { "muscle": "lower back",   "mv": 2,  "mev": 4,  "mav": 8,  "mrv": 12 },
+    { "muscle": "traps",        "mv": 0,  "mev": 4,  "mav": 16, "mrv": 26 },
+    { "muscle": "shoulders",    "mv": 8,  "mev": 8,  "mav": 19, "mrv": 26 },
+    { "muscle": "biceps",       "mv": 5,  "mev": 8,  "mav": 14, "mrv": 26 },
+    { "muscle": "triceps",      "mv": 4,  "mev": 6,  "mav": 12, "mrv": 18 },
+    { "muscle": "forearms",     "mv": 2,  "mev": 4,  "mav": 12, "mrv": 16 },
+    { "muscle": "quadriceps",   "mv": 6,  "mev": 8,  "mav": 16, "mrv": 20 },
+    { "muscle": "hamstrings",   "mv": 3,  "mev": 4,  "mav": 12, "mrv": 16 },
+    { "muscle": "glutes",       "mv": 0,  "mev": 4,  "mav": 12, "mrv": 16 },
+    { "muscle": "calves",       "mv": 6,  "mev": 8,  "mav": 16, "mrv": 20 },
+    { "muscle": "abdominals",   "mv": 0,  "mev": 4,  "mav": 16, "mrv": 25 },
+    { "muscle": "abductors",    "mv": 0,  "mev": 4,  "mav": 12, "mrv": 16 },
+    { "muscle": "adductors",    "mv": 0,  "mev": 4,  "mav": 12, "mrv": 16 },
+    { "muscle": "neck",         "mv": 0,  "mev": 0,  "mav": 8,  "mrv": 12 }
+  ]
+}

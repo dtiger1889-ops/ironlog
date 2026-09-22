@@ -1,0 +1,8 @@
+<resources>
+    <!-- Compose draws all UI; the activity just needs a dark no-action-bar host theme
+         (dark avoids a light flash on launch). Platform Material theme avoids pulling the
+         Material Components XML library. -->
+    <style name="Theme.Ironlog" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>
