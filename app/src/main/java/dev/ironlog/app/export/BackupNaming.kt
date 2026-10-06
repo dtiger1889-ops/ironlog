@@ -5,9 +5,8 @@ import java.time.format.DateTimeFormatter
 
 /**
  * Filenames for the automated/manual backup JSON files this app writes into the user-picked
- * SAF folder. Pure (no Android) so it's directly JVM-testable. Mirrors MoodLog's
- * `data.exporter.ExportFileNaming` (`mood-tracker/app/.../backup/`), the proven donor pattern
- * for F9 (ironlog's auto-backup was dead code -- nothing ever scheduled the worker).
+ * SAF folder: `ironlog_backup_` plus the date as `yyyy_MM_dd`, so the files sort by date in any
+ * folder listing. Pure (no Android) so it's directly JVM-testable.
  */
 object ExportFileNaming {
     private val DATE_FMT = DateTimeFormatter.ofPattern("yyyy_MM_dd")
