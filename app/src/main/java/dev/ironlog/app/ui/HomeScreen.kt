@@ -38,6 +38,7 @@ import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.runtime.LaunchedEffect
 import dev.ironlog.app.data.CoachSummary
 import dev.ironlog.app.data.Workout
+import dev.ironlog.app.data.importer.BundledHistoryImporter
 import java.util.Calendar
 
 /** M7 stretch timer (ACSM-cited). On the Workout tab since 2026-07-05 (was crammed in Profile). */
@@ -111,6 +112,8 @@ fun HomeScreen(
     val lastSummary by vm.lastCoachSummary.collectAsState()
     val activeDraft by vm.draft.collectAsState()
     val context = LocalContext.current
+    // Builds made without a history CSV get no import button (tapping it would have nothing to read).
+    val hasBundledHistory = remember(context) { BundledHistoryImporter.isBundled(context) }
 
     // A workout in progress must never be silently discarded by starting another. Tapping any
     // "start" while one is active routes through this confirm; the stored lambda runs on confirm.
@@ -242,12 +245,14 @@ fun HomeScreen(
                 Text("History")
             }
         }
-        item {
-            OutlinedButton(
-                onClick = { vm.importBundledHistory(context) },
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Text(if (counts.workouts == 0) "Import training history" else "Re-import training history")
+        if (hasBundledHistory) {
+            item {
+                OutlinedButton(
+                    onClick = { vm.importBundledHistory(context) },
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Text(if (counts.workouts == 0) "Import training history" else "Re-import training history")
+                }
             }
         }
     }

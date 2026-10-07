@@ -20,10 +20,20 @@ data class ImportResult(
  * Reads the bundled previous-tracker export from assets and loads it into Room.  The parse/convert
  * work lives in the pure [CsvHistoryImporter]; this layer only maps natural keys to row ids and
  * writes them in a single transaction.
+ *
+ * The CSV is optional: a build made without it has nothing to import, so the Home screen hides
+ * the import button unless [isBundled] says the file is there.
  */
 object BundledHistoryImporter {
 
     const val ASSET_NAME = "history_export.csv"
+
+    /** True when this build carries the history CSV in its assets. */
+    fun isBundled(context: Context): Boolean = isBundled(context.assets.list(""))
+
+    /** The check behind [isBundled], given the names at the root of the assets folder. */
+    fun isBundled(rootAssetNames: Array<String>?): Boolean =
+        rootAssetNames?.contains(ASSET_NAME) == true
 
     /** Imports the bundled CSV. Safe to call once on an empty DB. Returns row counts. */
     suspend fun importFromAssets(

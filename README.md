@@ -15,7 +15,9 @@ suggestions for when to add weight, and keep your data on your phone.
   deletes anything you've already recorded.
 - **Weekly JSON auto-backup**, so your history survives a lost or wiped phone.
 - **Share a workout as a PDF** — the same set-by-set wording shown on screen, ready to send.
-- **Import your history** from a CSV export of your previous tracker.
+- **Import your history** from a CSV export of your previous tracker: save it as
+  `app/src/main/assets/history_export.csv` before you build. A build without that file has no
+  import button.
 
 ## Design rules
 
