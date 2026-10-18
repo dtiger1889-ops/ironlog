@@ -90,8 +90,7 @@ class IronlogViewModel(
         settings.defaultRestSec.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 60)
     // RETIRED — DO NOT RE-WIRE. lockCompletedSets + deleteSetConfirmation were removed 2026-06-22
     // (set-locking was never wanted; delete-confirm silently changed swipe-delete). Nothing reads
-    // these; kept only so the DataStore keys stay readable. See
-    // specs/decisions/settings-lock-and-delete-confirm-removed.md.
+    // these; kept only so the DataStore keys stay readable.
     val lockCompletedSets: StateFlow<Boolean> =
         settings.lockCompletedSets.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
     val deleteSetConfirmation: StateFlow<Boolean> =

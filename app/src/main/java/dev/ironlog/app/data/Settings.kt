@@ -66,8 +66,7 @@ class AppSettings(private val context: Context) {
 
     // --- M6 settings ---
 
-    // RETIRED FEATURES — DO NOT RE-WIRE without asking the owner. See
-    // specs/decisions/settings-lock-and-delete-confirm-removed.md.
+    // RETIRED FEATURES — DO NOT RE-WIRE without asking the owner.
     // `lockCompletedSets` (lock a checked set so it can't be unchecked) and
     // `deleteSetConfirmation` (confirm-before-swipe-delete) were M6 toggles that were briefly
     // wired on 2026-06-22 and then DELIBERATELY REMOVED the same day: set-locking was never

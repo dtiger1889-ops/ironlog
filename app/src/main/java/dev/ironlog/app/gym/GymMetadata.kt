@@ -5,8 +5,7 @@ package dev.ironlog.app.gym
  * fields (name + force + primaryMuscles). No Room/Android dependencies — JVM-testable.
  *
  * These functions run once at exercise-seeding / reconciliation time and write the results
- * into Exercise.movementPattern + Exercise.deltHead. The derivation replaces hand-curation:
- * see specs/decisions/m5-movement-pattern-derivation.md.
+ * into Exercise.movementPattern + Exercise.deltHead. The derivation replaces hand-curation.
  */
 object GymMetadata {
 
