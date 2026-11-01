@@ -19,6 +19,12 @@ suggestions for when to add weight, and keep your data on your phone.
   `app/src/main/assets/history_export.csv` before you build. A build without that file has no
   import button.
 
+## Start here
+
+This is an Android app source project, not an AI skill. Build it with the Android SDK and the requirements below, then install the debug APK on an Android device running Android 7.0 or newer. On Windows, run `gradlew.bat assembleDebug` from the repo root. Open the app and try a workout before supplying an import file. No AI account is needed to log workouts.
+
+An agent can help with a build if it has the Android toolchain and file access. Ask: "Check the build requirements and explain how to build Ironlog for my device. Do not install an APK, import my history or modify an existing app's data without approval." Agent access is a development convenience, not an integration built into the app.
+
 ## Design rules
 
 - Nothing leaves the phone. There is no account, no server, and no analytics.
@@ -29,10 +35,14 @@ suggestions for when to add weight, and keep your data on your phone.
 Requirements: JDK 17, Android Gradle Plugin 8.5.2, Kotlin 1.9.25.
 
 ```
-./gradlew assembleDebug
+gradlew.bat assembleDebug
 ```
 
 The debug APK is written to `app/build/outputs/apk/debug/`.
+
+## Help
+
+For setup questions or errors, [open an issue](https://github.com/dtiger1889-ops/ironlog/issues) with the relevant versions and a redacted error description.
 
 ## License
 
