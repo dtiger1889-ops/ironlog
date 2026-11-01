@@ -34,6 +34,8 @@ An agent can help with a build if it has the Android toolchain and file access. 
 
 Requirements: JDK 17, Android Gradle Plugin 8.5.2, Kotlin 1.9.25.
 
+Windows build command (this repo includes the Windows wrapper only):
+
 ```
 gradlew.bat assembleDebug
 ```
